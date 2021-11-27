@@ -22,7 +22,7 @@ func (productModel ProductModel) Search(min, max float64) ([]entities.Product, e
 	for rows.Next() {
 		var id int64
 		var name string
-	  var price float32
+		var price float32
 		var quantity int
 		var status bool
 		err2 := rows.Scan(&id, &name, &price, &quantity, &status)
