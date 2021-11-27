@@ -19,7 +19,6 @@ func GetMySQLDB() (db *sql.DB, err error) {
 	password := os.Getenv("password")
 	schema := os.Getenv("schema")
 
-	// db, err = sql.Open("mysql", "root:rootadminjeff@(127.0.0.1:3306)/go?parseTime=true")
 	db, err = sql.Open("mysql", username + ":" + password + "@(127.0.0.1:3306)/" + schema + "?parseTime=true")
 	return db, err
 }
